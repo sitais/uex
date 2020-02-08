@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
           Container(
             height: 100.0,
             padding: EdgeInsets.only(bottom: 15.0),
-            color: Colors.yellow[300],
+            color: Colors.purple[800],
           ),
 
           // Middle expanded
@@ -19,15 +19,15 @@ class Home extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                Expanded(child: Container(color: Colors.green[300])),
+                Expanded(child: Container(color: Colors.purple[600])),
                 Container(
                   width: 100.0,
-                  color: Colors.red[300],
+                  color: Colors.purple[400],
                 )
               ])),
 
           // Bottom Section
-          Container(height: 80.0, color: Colors.blue[300]),
+          Container(height: 80.0, color: Colors.purple[300]),
         ],
       ),
     );
