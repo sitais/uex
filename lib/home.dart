@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// Empty page widget fo developers that want to follow along with the tutorial
+/// on breaking down and implementing the Tik Tok UI (BLOG_LINK)
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,7 +12,7 @@ class Home extends StatelessWidget {
           Container(
             height: 100.0,
             padding: EdgeInsets.only(bottom: 15.0),
-            color: Colors.purple[800],
+            color: Colors.yellow[300],
           ),
 
           // Middle expanded
@@ -19,15 +21,15 @@ class Home extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                Expanded(child: Container(color: Colors.purple[600])),
+                Expanded(child: Container(color: Colors.green[300])),
                 Container(
                   width: 100.0,
-                  color: Colors.purple[400],
+                  color: Colors.red[300],
                 )
               ])),
 
           // Bottom Section
-          Container(height: 80.0, color: Colors.purple[300]),
+          Container(height: 80.0, color: Colors.blue[300]),
         ],
       ),
     );
