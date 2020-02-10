@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:uex/tik_tok_icons_icons.dart';
 
 class ActionsToolbar extends StatelessWidget {
+  static const double ActionWidgetSize = 60.0;
+  static const double ShareActionIconSize = 25.0;
+  static const double ActionIconSize = 35.0;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,18 +22,21 @@ class ActionsToolbar extends StatelessWidget {
           ]),
     );
   }
-}
 
-Widget _getSocialAction({String title, IconData icon}) {
-  return Container(
-      margin: EdgeInsets.only(top: 15.0),
-      width: 60.0,
-      height: 60.0,
-      child: Column(children: [
-        Icon(icon, size: 35.0, color: Colors.grey[300]),
-        Padding(
-          padding: EdgeInsets.only(top: 2.0),
-          child: Text(title, style: TextStyle(fontSize: 12.0)),
-        )
-      ]));
+  Widget _getSocialAction({String title, IconData icon, bool isShare = false}) {
+    return Container(
+        margin: EdgeInsets.only(top: 15.0),
+        width: ActionWidgetSize,
+        height: ActionWidgetSize,
+        child: Column(children: [
+          Icon(icon,
+              size: isShare ? ShareActionIconSize : ActionIconSize,
+              color: Colors.grey[300]),
+          Padding(
+            padding: EdgeInsets.only(top: isShare ? 5.0 : 2.0),
+            child:
+                Text(title, style: TextStyle(fontSize: isShare ? 10.0 : 12.0)),
+          )
+        ]));
+  }
 }
