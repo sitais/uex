@@ -9,7 +9,7 @@ class ActionsToolbar extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: List<Widget>.generate(
-            5,
+            6,
             (index) => Container(
                 width: 60,
                 height: 60,
